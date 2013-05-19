@@ -7,7 +7,7 @@ class LoginForm(forms.Form):
  
 
 class RegisterForm (forms.Form):
-    username = forms.CharField(max_length = 30)
+    username = forms.CharField(max_length = 30,
     email = forms.EmailField(help_text = 'Enter your e-mail address. eg, someone@gmail.com',
                              required = False)
     password = forms.CharField(min_length = 6,

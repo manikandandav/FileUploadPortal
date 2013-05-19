@@ -3,9 +3,6 @@
 	<title> Home Page </title>
     </head>
     <body>
-        <ul class="nav">
-	    <li class=""><a href="/logout/">Logout</a></li>
-        </ul>
 	Must insert more content here
     </body>
 </html>

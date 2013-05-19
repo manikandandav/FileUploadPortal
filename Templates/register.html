@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+	<div id="wrapper" class="">
+    	<div id="header" class="navbar navbar-inverse navbar-static-top">
+        	<div class="navbar-inner">
+            	<div class="container">
+                	<a class="brand" href="{{site_url}}">Registration Page</a>
+                    <div id="links" class="pull-right nav-collapse collapse">
+                    	<ul class="nav">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content" class="container">
+        	<div class="row-fluid">
+                <div class="span12 well" id="forms">
+                     {% if errorinregistration %}
+						<span style="color:#9d261d">Invalid Registration! Try again!</span>
+					{% endif %}
+                      <br/>
+                      {% if registered %}
+                      <h4><i class="icon-ok"></i> Registered Successfully!
+                          <a href="/login/">Proceed to Login</a></h4>
+                      {% else %}
+                      <h3>Register</h3>
+                            <form action="" method="POST">
+                              {%csrf_token%}
+                              {{ register_form.as_table }}
+                              <input type="submit" value="Register" class="btn btn-primary"/>
+                            </form>
+                      {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
